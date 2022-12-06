@@ -8,7 +8,7 @@ video = yt.streams.filter(only_audio=True).first()
 print("Enter the destination(Leave blank or current directory)")
 destination = str(input(">>")) or '.'
 
-outfile = video.download(output_path=destination)
+out_file = video.download(output_path=destination)
 
 base, ext = os.path.splitext(out_file)
 new_file = base + '.mp3'
